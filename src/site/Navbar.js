@@ -12,7 +12,7 @@ const Sitebar = (props) => {
         <div className="navbar">
             <Nav className="drop-down-row">
                 <div id="user">
-                    <ButtonDropdown nav isOpen={false} toggle={toggle}>
+                    <ButtonDropdown isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
                             User
                         </DropdownToggle>
