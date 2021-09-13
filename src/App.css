@@ -1,16 +1,11 @@
 .App {
   text-align: center;
+  background-color: rgb(33, 107, 245);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,11 +23,50 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  border:crimson 1px solid;
+  text-align: center;
+  /* display: grid;
+  grid-template-rows: auto auto auto auto; */
 }
+
+/* #user {
+  grid-row: 1 / 4;
+}
+
+#collections {
+  grid-row: 2 / 4;
+}
+
+#wishlists {
+  grid-row: 3 / 4;
+}
+
+#search {
+  grid-row: 4 / 4;
+} */
+
+.drop-down-row {
+  width: 100%;
+  background-color: rgb(6, 201, 201);
+  color: blanchedalmond;
+  border:crimson 1px solid;
+  margin: 0% auto;
+  padding: auto;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:crimson 1px solid;
+
+}
+
+#card {
+  width: 350px;
+  border:crimson 1px solid;
+
+}
+
