@@ -10,6 +10,7 @@ const Sitebar = (props) => {
 
     return (
         <div className="navbar">
+
             <Nav className="drop-down-row">
                 <div id="user">
                     <ButtonDropdown isOpen={false} toggle={toggle}>
@@ -25,7 +26,7 @@ const Sitebar = (props) => {
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
-                <br/>
+                <br />
                 <div id="collections">
                     <ButtonDropdown nav isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
@@ -40,7 +41,7 @@ const Sitebar = (props) => {
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
-                <br/>
+                <br />
                 <div id="wishlists">
                     <ButtonDropdown nav isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
@@ -55,10 +56,10 @@ const Sitebar = (props) => {
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
-                <br/>
+                <br />
                 <div id="search">
                     <InputGroup>
-                    <Input placeholder="" />
+                        <Input placeholder="" />
                         <InputGroupAddon addonType="append"><Button>Search</Button></InputGroupAddon>
                     </InputGroup>
                 </div>

@@ -5,8 +5,23 @@ import Body from './site/Body';
 import Footer from './site/Footer';
 import ModalExample from './site/ModalExample';
 import ModalExample2 from './site/ModalExample2';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [sessionToken, setSessionToken] = useState('');
+
+  useEffect(() => {
+    if (localStorage.getItem('token')){
+      setSessionToken(localStorage.getItem('token'));
+    }
+  }, [])
+
+  const updateToken = (newToken) => {
+    localStorage.setItem('token', newToken);
+    setSessionToken(newToken);
+    console.log(sessionToken);
+  }
+
   return (
     <div className="App">
       <Header />

@@ -26,33 +26,47 @@
 .navbar {
   border:crimson 1px solid;
   text-align: center;
-  /* display: grid;
-  grid-template-rows: auto auto auto auto; */
+  display: inline-block;
+  width: 100%;
 }
 
-/* #user {
-  grid-row: 1 / 4;
+/* .leftPadding {
+  width: 15%;
+}
+
+.rightPadding {
+  width: 15%;
+} */
+#user {
+  width: 25%;
+  border:crimson 1px solid;
+
 }
 
 #collections {
-  grid-row: 2 / 4;
+  width: 25%;
+  border:crimson 1px solid;
+
 }
 
 #wishlists {
-  grid-row: 3 / 4;
+  width: 25%;
+  border:crimson 1px solid;
+
 }
 
 #search {
-  grid-row: 4 / 4;
-} */
+  width: 25%;
+  border:crimson 1px solid;
+
+}
 
 .drop-down-row {
   width: 100%;
   background-color: rgb(6, 201, 201);
   color: blanchedalmond;
   border:crimson 1px solid;
-  margin: 0% auto;
-  padding: auto;
+  display: inline-block;
 }
 
 .body {
