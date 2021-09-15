@@ -29,11 +29,11 @@ const UserCreate = (props) => {
                     <Form>
                         <FormGroup>
                             <Label for="username">Username</Label>
-                            <Input type="text" value={username} name="username" id="username" placeholder="#1FunkoFan" />
+                            <Input onChange={(e) => setUsername(e.target.value)} type="text" value={username} name="username" id="username" placeholder="#1FunkoFan" />
                         </FormGroup>
                         <FormGroup>
                             <Label for="exampleEmail">Email</Label>
-                            <Input type="email" value={email} name="email" id="exampleEmail" placeholder="funkoFan@imaginaryemail.com" />
+                            <Input onChange={(e) => setEmail(e.target.value)} type="email" value={email} name="email" id="exampleEmail" placeholder="funkoFan@imaginaryemail.com" />
                         </FormGroup>
                         <Row form>
                             <Col>
@@ -49,14 +49,6 @@ const UserCreate = (props) => {
                                 </FormGroup>
                             </Col>
                         </Row>
-                        <FormGroup check>
-                            <Input type="checkbox" name="check" id="exampleCheck" />
-                            <Label for="exampleCheck" check>Create New Collection</Label>
-                        </FormGroup>
-                        <FormGroup check>
-                            <Input type="checkbox" name="check" id="exampleCheck" />
-                            <Label for="exampleCheck" check>Create New Wishlist</Label>
-                        </FormGroup>
                     </Form>
                 </ModalBody>
                 <ModalFooter>

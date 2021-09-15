@@ -15,12 +15,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.header {
+  font-family: Moonshine;
+  font-size: 48px;
+  font-weight: 900;
 }
 
 .navbar {
@@ -58,7 +64,8 @@
 #search {
   width: 25%;
   border:crimson 1px solid;
-
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .drop-down-row {
@@ -67,6 +74,8 @@
   color: blanchedalmond;
   border:crimson 1px solid;
   display: inline-block;
+  font-family: AlohaSummer;
+  font-size: 24px;
 }
 
 .body {
@@ -84,3 +93,32 @@
 
 }
 
+@font-face {
+  font-family: SmoothButter;
+  src: url('./assets/SmoothButter-PK3ym.ttf');
+}
+
+@font-face {
+  font-family: Moonshine;
+  src: url('./assets/MoonshinePersonalUseRegular-w1xrZ.ttf');
+}
+
+@font-face {
+  font-family: ComicBoomElements;
+  src: url('./assets/ComicBoomElementsDemo-YzMMO.ttf');
+}
+
+@font-face {
+  font-family: VintageRound;
+  src: url('./assets/VintageRoundPersonalUse-0W1Z4.otf');
+}
+
+@font-face {
+  font-family: Smilen;
+  src: url('./assets/Smilen-gKW6.otf');
+}
+
+@font-face {
+  font-family: AlohaSummer;
+  src: url('./assets/Alohasummer-PKX7r.ttf');
+}

@@ -3,7 +3,7 @@ import { Jumbotron, Container } from 'reactstrap';
 
 const Header = (props) => {
     return (
-        <div>
+        <div className="header">
             <Jumbotron fluid>
                 <Container fluid>
                     <h1 className="display-3">Funko Pop Collection Database</h1>

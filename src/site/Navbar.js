@@ -15,7 +15,7 @@ const Sitebar = (props) => {
                 <div id="user">
                     <ButtonDropdown isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
-                            User
+                            USER  
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem header>Header</DropdownItem>
@@ -30,7 +30,7 @@ const Sitebar = (props) => {
                 <div id="collections">
                     <ButtonDropdown nav isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
-                            Collections
+                            COLLECTIONS
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem header>Header</DropdownItem>
@@ -45,7 +45,7 @@ const Sitebar = (props) => {
                 <div id="wishlists">
                     <ButtonDropdown nav isOpen={false} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
-                            Wishlists
+                            WISHLISTS
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem header>Header</DropdownItem>
