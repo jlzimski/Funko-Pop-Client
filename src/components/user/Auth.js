@@ -1,13 +1,12 @@
 import React from "react";
-// import { Container } from "reactstrap";
-// import UserCreate from "./userCreate";
-// import UserLogin from "./userLogin";
+import UserCreate from "./UserCreate";
+import UserLogin from "./UserLogin";
 
 const Auth = (props) => {
     return(
         <div className="auth">
-            {/* <UserCreate />
-            <UserLogin /> */}
+            <UserCreate updateToken={props.updateToken} />
+            <UserLogin updateToken={props.updateToken} />
         </div>
     )
 }

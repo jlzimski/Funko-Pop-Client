@@ -19,44 +19,59 @@ const UserCreate = (props) => {
 
     const toggle = () => setModal(!modal);
 
+    let handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(username, password)
+        fetch("http://localhost:3000/user/register", {
+            method: 'POST',
+            body: new Headers({
+                'Content-Type': 'application/json',
+            })
+        }).then(
+            (response) => response.json()
+        ).then((data) => {
+            props.updateToken(data.sessionToken)
+        })
+    }
+
     return (
         <div>
             <br />
             <Button color="info" onClick={toggle}>{buttonLabel}Create User Account</Button>
             <Modal isOpen={modal} toggle={toggle} className={className}>
                 <ModalHeader toggle={toggle}>Create User Account</ModalHeader>
+                <Form onSubmit={handleSubmit}>
                 <ModalBody>
-                    <Form>
-                        <FormGroup>
-                            <Label for="username">Username</Label>
-                            <Input onChange={(e) => setUsername(e.target.value)} type="text" value={username} name="username" id="username" placeholder="#1FunkoFan" />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="exampleEmail">Email</Label>
-                            <Input onChange={(e) => setEmail(e.target.value)} type="email" value={email} name="email" id="exampleEmail" placeholder="funkoFan@imaginaryemail.com" />
-                        </FormGroup>
-                        <Row form>
-                            <Col>
-                                <FormGroup>
-                                    <Label for="examplePassword">Password</Label>
-                                    <Input type="password"value={password} name="password" id="password" placeholder="password" />
-                                </FormGroup>
-                            </Col>
-                            <Col>
-                                <FormGroup>
-                                    <Label for="examplePassword">Confirm Password</Label>
-                                    <Input type="password" value={confirmPassword} name="confirmPassword" id="confirmPassword" placeholder="confirm password" />
-                                </FormGroup>
-                            </Col>
-                        </Row>
-                    </Form>
+                    <FormGroup>
+                    <Label for="username">Username</Label>
+                    <Input onChange={(e) => setUsername(e.target.value)} type ="text" value={username} name="username" id="username" placeholder="#1FunkoFan" />
+                    </FormGroup>
+                    <FormGroup>
+                    <Label for="email">Email</Label>
+                    <Input onChange={(e) => setEmail(e.target.value)} type ="email" value={email} name="email" id="exampleEmail" placeholder="funkoFan@imaginaryemail.com" />
+                    </FormGroup>
+                    <Row form>
+                    <Col>
+                    <FormGroup>
+                    <Label for="password">Password</Label>
+                    <Input onChange={(e) => setPassword(e.target.value)} type ="password"value={password} name="password" id="password" placeholder="password" />
+                    </FormGroup>
+                    </Col>
+                    <Col>
+                    <FormGroup>
+                    <Label for="confirmPassword">Confirm Password</Label>
+                    <Input onChange={(e) => setConfirmPassword(e.target.value)} type ="password" value={confirmPassword} name="confirmPassword" id="confirmPassword" placeholder="confirm password" />
+                    </FormGroup>
+                    </Col>
+                    </Row>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="info" onClick={toggle}>Create New User</Button>{' '}
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
                 </ModalFooter>
-            </Modal>
-        </div>
+            </Form>
+        </Modal>
+        </div >
     );
 }
 

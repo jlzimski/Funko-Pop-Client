@@ -6,6 +6,7 @@ import Footer from './site/Footer';
 import ModalExample from './site/ModalExample';
 import ModalExample2 from './site/ModalExample2';
 import { useEffect, useState } from 'react';
+import Auth from './components/user/Auth'
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Sitebar />
+      <Auth updateToken={updateToken} />
       <ModalExample2 />
       <ModalExample />
       <Body />
