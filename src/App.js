@@ -23,10 +23,15 @@ function App() {
     console.log(sessionToken);
   }
 
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
+  }
+
   return (
     <div className="App">
       <Header />
-      <Sitebar />
+      <Sitebar clickLogout={clearToken}/>
       <Auth updateToken={updateToken} />
       <ModalExample2 />
       <ModalExample />

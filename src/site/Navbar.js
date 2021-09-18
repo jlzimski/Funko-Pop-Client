@@ -13,16 +13,16 @@ const Sitebar = (props) => {
 
             <Nav className="drop-down-row">
                 <div id="user">
-                    <ButtonDropdown isOpen={false} toggle={toggle}>
+                    <ButtonDropdown isOpen={true} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
                             USER  
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem header>Header</DropdownItem>
-                            <DropdownItem disabled>Action</DropdownItem>
-                            <DropdownItem>Another Action</DropdownItem>
+                            <DropdownItem header>User</DropdownItem>
+                            <DropdownItem>Sign In</DropdownItem>
+                            <DropdownItem>Edit Account</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem>Another Action</DropdownItem>
+                            <DropdownItem onClick={props.clickLogout}>Logout</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
@@ -33,26 +33,26 @@ const Sitebar = (props) => {
                             COLLECTIONS
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem header>Header</DropdownItem>
-                            <DropdownItem disabled>Action</DropdownItem>
+                            <DropdownItem header>Collections</DropdownItem>
+                            <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem>Another Action</DropdownItem>
+                            <DropdownItem onClick={props.createCollection}>Create Collection</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
                 <br />
                 <div id="wishlists">
-                    <ButtonDropdown nav isOpen={false} toggle={toggle}>
+                    <ButtonDropdown nav isOpen={true} toggle={toggle}>
                         <DropdownToggle nav caret color="info">
                             WISHLISTS
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem header>Header</DropdownItem>
-                            <DropdownItem disabled>Action</DropdownItem>
+                            <DropdownItem header>Wishlists</DropdownItem>
+                            <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem>Another Action</DropdownItem>
+                            <DropdownItem onClick={props.createWishlist} >Create Wishlist</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>

@@ -7,7 +7,7 @@ const UserCreate = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    // const [confirmPassword, setConfirmPassword] = useState('');
 
 
     const {
@@ -57,12 +57,12 @@ const UserCreate = (props) => {
                     <Input onChange={(e) => setPassword(e.target.value)} type ="password"value={password} name="password" id="password" placeholder="password" />
                     </FormGroup>
                     </Col>
-                    <Col>
+                    {/* <Col>
                     <FormGroup>
                     <Label for="confirmPassword">Confirm Password</Label>
                     <Input onChange={(e) => setConfirmPassword(e.target.value)} type ="password" value={confirmPassword} name="confirmPassword" id="confirmPassword" placeholder="confirm password" />
                     </FormGroup>
-                    </Col>
+                    </Col> */}
                     </Row>
                 </ModalBody>
                 <ModalFooter>

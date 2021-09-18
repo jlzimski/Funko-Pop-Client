@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 
-
-
-
-
 const UserLogin = (props) => {
     const [email, setEmail] = useState('');
     const [username, setUserName] = useState('');
@@ -19,6 +15,21 @@ const UserLogin = (props) => {
 
     const toggle = () => setModal(!modal);
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        fetch('http://localhost:3000/user/login', {
+            method: 'POST',
+            body: JSON.stringify({user:{username: username, password: password}}),
+            headers: new Headers({
+                'Content-Type': 'application/json/'
+            })
+        }).then(
+            (response) => response.json()
+        ).then((data) => {
+            props.updateToken(data.sessionToken);
+        })
+    }
+
     return (
         <div>
             <div>
@@ -26,13 +37,13 @@ const UserLogin = (props) => {
                 <Modal isOpen={modal} toggle={toggle} className={className}>
                     <ModalHeader toggle={toggle}>User Login</ModalHeader>
                     <ModalBody>
-                        <Form inline>
+                        <Form inline onSubmit={handleSubmit}>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                                 <Label for="email" className="mr-sm-2">Email</Label>
                                 <Input onChange={(e) => setEmail(e.target.value)} type="email" value={email} name="email" id="exampleEmail" placeholder="funkoFanatic@fake.cool" />
                             </FormGroup>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                                <Label for="username" className="mr-sm-2">Password</Label>
+                                <Label for="username" className="mr-sm-2">Username</Label>
                                 <Input onChange={(e) => setUserName(e.target.value)} type="username" value={username} name="username" id="username" placeholder="#1FunkoFan" />
                             </FormGroup>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
@@ -42,7 +53,7 @@ const UserLogin = (props) => {
                         </Form>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" type="submit  " onClick={toggle}>Login</Button>{' '}
+                        <Button color="primary" type="submit" onClick={toggle}>Login</Button>{' '}
                         <Button color="secondary" onClick={toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>
