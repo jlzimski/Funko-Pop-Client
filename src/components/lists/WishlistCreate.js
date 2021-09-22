@@ -22,7 +22,7 @@ const WishlistCreate = (props) => {
 
     return (
         <div>
-            <Button color="success" onClick={toggleWishlist}>Create a Collection</Button>
+            <Button color="success" onClick={toggleWishlist}>Create a Wishlist</Button>
             <Modal isOpen={wishlistModal} toggle={toggleWishlist} onClosed={closeAll ? toggle : undefined}>
                 <ModalHeader>Create Wishlist</ModalHeader>
                 <ModalBody>

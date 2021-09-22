@@ -4,16 +4,21 @@ import { Button, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 
 const Sitebar = (props) => {
-    const [dropdownOpen, setOpen] = useState(false);
+    const [userDropdown, setUserDropdown] = useState(false);
+    const [collectionDropdown, setCollectionDropdown] = useState(false);
+    const [wishlistDropdown, setWishlistDropdown] = useState(false);
 
-    const toggle = () => setOpen(!dropdownOpen);
+    const toggleUser = () => setUserDropdown(!userDropdown);
+    const toggleCollection = () => setCollectionDropdown(!collectionDropdown);
+    const toggleWishlist = () => setWishlistDropdown(!wishlistDropdown);
+
 
     return (
         <div className="navbar">
 
             <Nav className="drop-down-row">
                 <div id="user">
-                    <ButtonDropdown isOpen={true} toggle={toggle}>
+                    <ButtonDropdown isOpen={userDropdown} toggle={toggleUser}>
                         <DropdownToggle nav caret color="info">
                             USER  
                         </DropdownToggle>
@@ -28,7 +33,7 @@ const Sitebar = (props) => {
                 </div>
                 <br />
                 <div id="collections">
-                    <ButtonDropdown nav isOpen={false} toggle={toggle}>
+                    <ButtonDropdown isOpen={collectionDropdown} toggle={toggleCollection}>
                         <DropdownToggle nav caret color="info">
                             COLLECTIONS
                         </DropdownToggle>
@@ -43,7 +48,7 @@ const Sitebar = (props) => {
                 </div>
                 <br />
                 <div id="wishlists">
-                    <ButtonDropdown nav isOpen={true} toggle={toggle}>
+                    <ButtonDropdown isOpen={wishlistDropdown} toggle={toggleWishlist}>
                         <DropdownToggle nav caret color="info">
                             WISHLISTS
                         </DropdownToggle>
