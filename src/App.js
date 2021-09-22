@@ -33,8 +33,8 @@ function App() {
       <Header />
       <Sitebar clickLogout={clearToken}/>
       <Auth updateToken={updateToken} />
-      <ModalExample2 />
-      <ModalExample />
+      {/* <ModalExample2 />
+      <ModalExample /> */}
       <Body />
       <br/>
       <hr/>
