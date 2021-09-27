@@ -5,8 +5,10 @@ import Body from './site/Body';
 import Footer from './site/Footer';
 import { useEffect, useState } from 'react';
 import Auth from './components/user/Auth'
-import CollectionCreate from './components/lists/CollectionCreate';
-import ListIndex from './components/lists/ListIndex';
+// import CollectionCreate from './components/lists/CollectionCreate';
+// import ListIndex from './components/lists/ListIndex';
+import Items from './components/items/Items';
+import Jumbotron from './components/items/Jumbotron';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -33,8 +35,10 @@ function App() {
       <Header />
       <Sitebar clickLogout={clearToken}/>
       <Auth updateToken={updateToken} />
-      <ListIndex updateToken={updateToken} />
+      {/* <ListIndex updateToken={updateToken} /> */}
       <br/> 
+      <Jumbotron />
+      <Items />
       <Body />
       <br/>
       <hr/>
