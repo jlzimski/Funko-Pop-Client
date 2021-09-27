@@ -6,6 +6,7 @@ const Auth = (props) => {
     return(
         <div className="auth">
             <UserCreate updateToken={props.updateToken} />
+            <br/>
             <UserLogin updateToken={props.updateToken} />
         </div>
     )

@@ -5,6 +5,8 @@ import Body from './site/Body';
 import Footer from './site/Footer';
 import { useEffect, useState } from 'react';
 import Auth from './components/user/Auth'
+import CollectionCreate from './components/lists/CollectionCreate';
+import ListIndex from './components/lists/ListIndex';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -31,8 +33,8 @@ function App() {
       <Header />
       <Sitebar clickLogout={clearToken}/>
       <Auth updateToken={updateToken} />
-      {/* <ModalExample2 />
-      <ModalExample /> */}
+      <ListIndex updateToken={updateToken} />
+      <br/> 
       <Body />
       <br/>
       <hr/>

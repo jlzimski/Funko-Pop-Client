@@ -42,7 +42,7 @@ const Sitebar = (props) => {
                             <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem onClick={props.createCollection}>Create Collection</DropdownItem>
+                            <DropdownItem onClick={props.CollectionCreate}>Create Collection</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
@@ -57,7 +57,7 @@ const Sitebar = (props) => {
                             <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem onClick={props.createWishlist} >Create Wishlist</DropdownItem>
+                            <DropdownItem onClick={props.WishlistCreate} >Create Wishlist</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import CollectionCreate from './CollectionCreate';
+import WishlistCreate from './WishlistCreate';
 
 
 const ListIndex = (props) => {
@@ -12,22 +14,22 @@ const ListIndex = (props) => {
                 'Authorization': props.token
             })
         }).then((res) => res.json())
-        .then((logData) => {
-            setCollections(logData)
-        })
+            .then((logData) => {
+                setCollections(logData)
+            })
     }
 
 
-useEffect(() => {
-    fetchCollections();
-}, [])
+    useEffect(() => {
+        fetchCollections();
+    }, [])
 
-return(
-    <div className="collections">
-    <ul>
-    <li>list items here</li>
-    </ul>
-    </div>
+    return (
+        <div className="collections">
+            <CollectionCreate />
+            <br />
+            <WishlistCreate />
+        </div>
     )
 }
 export default ListIndex;
