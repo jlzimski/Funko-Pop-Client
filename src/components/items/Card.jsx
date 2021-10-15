@@ -29,6 +29,7 @@
 // }
 
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
 export default class Card extends Component {
     render() {
@@ -36,15 +37,18 @@ export default class Card extends Component {
         let item = this.props.item.map((item) => {
             return (
                 <div className="card col-md-6" style={{ width: '20rem' }} key={item.id}>
-                    <img className="card-img-top w-100" src="../studioGhibliWorld.jpg" alt="" />
+                    <img className="card-img-top w-100" src="\assets\janedoefunko.jpg" alt="" />
                     <div className="card-block">
                         <h2 className="card-title">{item.title}</h2>
-                        <p className="card-text">{item.description.substring(0, 350)}</p>
                     </div>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">{item.image}</li>
                         <li className="list-group-item">{item.series}</li>
                     </ul>
+                    <div>
+                    <Button color="info" onClick="">Collection</Button>{' '}
+                    <Button color="info" onClick="">Wishlist</Button>                   
+                    </div>
                 </div>
             )
         })

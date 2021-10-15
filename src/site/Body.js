@@ -3,7 +3,7 @@ import { Card, Button, CardTitle, CardText, CardImg } from 'reactstrap';
 
 const Body = (props) => {
     return (
-        <><div class="btn-toolbar justify-content-centercd" role="toolbar" aria-label="Toolbar with button groups">
+        <><div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group me-2" role="group" aria-label="First group">
                 <button type="button" class="btn btn-info">A</button>
                 <button type="button" class="btn btn-info">B</button>

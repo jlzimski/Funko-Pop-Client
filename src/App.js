@@ -37,7 +37,7 @@ function App() {
       <Auth updateToken={updateToken} />
       {/* <ListIndex updateToken={updateToken} /> */}
       <br/> 
-      <Jumbotron />
+      {/* <Jumbotron /> */}
       <Items />
       <Body />
       <br/>

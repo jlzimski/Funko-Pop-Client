@@ -38,7 +38,7 @@ export default class Items extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://localhost:3000/items')
+        fetch('http://localhost:3000/item')
             .then(results => {
                 return results.json();
             }).then(data => {
