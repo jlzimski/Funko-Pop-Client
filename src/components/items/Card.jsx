@@ -45,6 +45,7 @@ export default class Card extends Component {
                         <li className="list-group-item">{item.image}</li>
                         <li className="list-group-item">{item.series}</li>
                     </ul>
+                    <br/>
                     <div>
                     <Button color="info" onClick="">Collection</Button>{' '}
                     <Button color="info" onClick="">Wishlist</Button>                   
