@@ -1,11 +1,9 @@
 .App {
   text-align: center;
   background-color: #6f7580;
-  background-image: url("./assets/transparent-pop-background.jpg");
+  background-image: url("./assets/blue-pop-background.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  animation: gradient 45s ease infinite;
-
 }
 
 .App-logo {
@@ -14,8 +12,8 @@
 }
 
 .App-header {
-  background-color: #6f7580;
-  background-image: url("./assets/transparent-pop-background.jpg");
+  /* background-color: #6f7580; */
+  background-image: url("./assets/blue-pop-background.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,6 +33,10 @@
   font-weight: 900;
 }
 
+#header {
+  font-size: 7.5rem;
+}
+
 .navbar {
   border:crimson 1px solid;
   text-align: center;
@@ -50,22 +52,9 @@
   width: 15%;
 } */
 #user {
-  width: 25%;
   border:crimson 1px solid;
-
 }
 
-#collections {
-  width: 25%;
-  border:crimson 1px solid;
-
-}
-
-#wishlists {
-  width: 25%;
-  border:crimson 1px solid;
-
-}
 
 #search {
   width: 25%;
@@ -76,12 +65,15 @@
 
 .drop-down-row {
   width: 100%;
-  background-color: #6f7580;
+  background-color: #1a6fa8;
   color: blanchedalmond;
   border:crimson 1px solid;
   display: inline-block;
   font-family: StickyNotes;
   font-size: 24px;
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
 }
 
 .body {
@@ -100,14 +92,10 @@
 }
 
 .mainBody {
-	background: linear-gradient(-45deg, #9a05d4, #f3035f, #0508ca, #04df16, #01795d);
+	background: linear-gradient(-45deg, #9a05d4, #0508ca, #01795d);
 	background-size: 400% 400%;
-	animation: gradient 45s ease infinite;
+	animation: gradient 15s ease infinite;
 	height: 100vh;
-}
-
-#header {
-  font-size: 7.5rem;
 }
 
 @keyframes gradient {
