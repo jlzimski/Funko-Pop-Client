@@ -8,7 +8,6 @@ import Auth from './components/user/Auth'
 // import CollectionCreate from './components/lists/CollectionCreate';
 // import ListIndex from './components/lists/ListIndex';
 import Items from './components/items/Items';
-import Jumbotron from './components/items/Jumbotron';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -32,15 +31,16 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <Sitebar clickLogout={clearToken}/>
+      <Header />
       <Auth updateToken={updateToken} />
       {/* <ListIndex updateToken={updateToken} /> */}
+      <div className="mainBody">
       <br/> 
-      {/* <Jumbotron /> */}
       <Items />
       <Body />
       <br/>
+      </div>
       <hr/>
       <Footer />
     </div>

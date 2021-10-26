@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 
 const UserLogin = (props) => {
-    const [username, setUserName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
 
@@ -15,7 +15,7 @@ const UserLogin = (props) => {
         event.preventDefault();
         fetch('http://localhost:3000/user/login', {
             method: 'POST',
-            body: JSON.stringify({user:{username: username, password: password}}),
+            body: JSON.stringify({user:{ email: email, password: password}}),
             headers: new Headers({
                 'Content-Type': 'application/json/'
             })
@@ -35,8 +35,8 @@ const UserLogin = (props) => {
                     <Form onSubmit={handleSubmit}>
                     <ModalBody>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                                <Label for="username" className="mr-sm-2">Username</Label>
-                                <Input onChange={(e) => setUserName(e.target.value)} type="username" value={username} name="username" id="username" placeholder="#1FunkoFan" />
+                                <Label for="email" className="mr-sm-2">Email</Label>
+                                <Input onChange={(e) => setEmail(e.target.value)} type="email" value={email} name="email" id="email" placeholder="#1FunkoFan@email.com" />
                             </FormGroup>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                                 <Label for="password" className="mr-sm-2">Password</Label>

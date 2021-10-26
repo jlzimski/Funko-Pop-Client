@@ -5,12 +5,12 @@ import { Button, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 const Sitebar = (props) => {
     const [userDropdown, setUserDropdown] = useState(false);
-    const [collectionDropdown, setCollectionDropdown] = useState(false);
-    const [wishlistDropdown, setWishlistDropdown] = useState(false);
+    // const [collectionDropdown, setCollectionDropdown] = useState(false);
+    // const [wishlistDropdown, setWishlistDropdown] = useState(false);
 
     const toggleUser = () => setUserDropdown(!userDropdown);
-    const toggleCollection = () => setCollectionDropdown(!collectionDropdown);
-    const toggleWishlist = () => setWishlistDropdown(!wishlistDropdown);
+    // const toggleCollection = () => setCollectionDropdown(!collectionDropdown);
+    // const toggleWishlist = () => setWishlistDropdown(!wishlistDropdown);
 
 
     return (
@@ -20,19 +20,22 @@ const Sitebar = (props) => {
                 <div id="user">
                     <ButtonDropdown isOpen={userDropdown} toggle={toggleUser}>
                         <DropdownToggle nav caret color="info">
-                            USER  
+                            MENU 
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem header>User</DropdownItem>
                             <DropdownItem>Sign In</DropdownItem>
                             <DropdownItem>Edit Account</DropdownItem>
                             <DropdownItem divider />
+                            <DropdownItem onClick={props.CollectionCreate}>Create Collection</DropdownItem>
+                            <DropdownItem onClick={props.WishlistCreate} >Create Wishlist</DropdownItem>
+                            <DropdownItem divider />
                             <DropdownItem onClick={props.clickLogout}>Logout</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
                 </div>
                 <br />
-                <div id="collections">
+                {/* <div id="collections">
                     <ButtonDropdown isOpen={collectionDropdown} toggle={toggleCollection}>
                         <DropdownToggle nav caret color="info">
                             COLLECTIONS
@@ -41,12 +44,11 @@ const Sitebar = (props) => {
                             <DropdownItem header>Collections</DropdownItem>
                             <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem onClick={props.CollectionCreate}>Create Collection</DropdownItem>
+
                         </DropdownMenu>
                     </ButtonDropdown>
-                </div>
-                <br />
+                </div> */}
+                {/* <br />
                 <div id="wishlists">
                     <ButtonDropdown isOpen={wishlistDropdown} toggle={toggleWishlist}>
                         <DropdownToggle nav caret color="info">
@@ -57,10 +59,9 @@ const Sitebar = (props) => {
                             <DropdownItem >Action</DropdownItem>
                             <DropdownItem>Another Action</DropdownItem>
                             <DropdownItem divider />
-                            <DropdownItem onClick={props.WishlistCreate} >Create Wishlist</DropdownItem>
                         </DropdownMenu>
                     </ButtonDropdown>
-                </div>
+                </div> */}
                 <br />
                 <div id="search">
                     <InputGroup>

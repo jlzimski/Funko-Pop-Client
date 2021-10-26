@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-  background-color: rgb(33, 107, 245);
+  background-color: #6f7580;
+  background-image: url("./assets/transparent-pop-background.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: gradient 45s ease infinite;
+
 }
 
 .App-logo {
@@ -9,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #6f7580;
+  background-image: url("./assets/transparent-pop-background.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +30,8 @@
 }
 
 .header {
-  font-family: Moonshine;
-  font-size: 48px;
+  font-family: Bangers;
+  font-size: 4rem;
   font-weight: 900;
 }
 
@@ -70,7 +76,7 @@
 
 .drop-down-row {
   width: 100%;
-  background-color: rgb(6, 201, 201);
+  background-color: #6f7580;
   color: blanchedalmond;
   border:crimson 1px solid;
   display: inline-block;
@@ -91,6 +97,29 @@
   width: 350px;
   border:crimson 1px solid;
 
+}
+
+.mainBody {
+	background: linear-gradient(-45deg, #9a05d4, #f3035f, #0508ca, #04df16, #01795d);
+	background-size: 400% 400%;
+	animation: gradient 45s ease infinite;
+	height: 100vh;
+}
+
+#header {
+  font-size: 7.5rem;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @font-face {
@@ -126,4 +155,9 @@
 @font-face {
   font-family: AlohaSummer;
   src: url('./assets/Alohasummer-PKX7r.ttf');
+}
+
+@font-face {
+  font-family: Bangers;
+  src: url('./assets/Bangers-Regular.ttf');
 }

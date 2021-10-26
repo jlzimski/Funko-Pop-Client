@@ -6,8 +6,7 @@ const Header = (props) => {
         <div className="header">
             <Jumbotron fluid>
                 <Container fluid>
-                    <h1 className="display-3">Funko Pop Collection Database</h1>
-                    <p className="lead">other text</p>
+                    <h1 id="header">Funko Pop Collection Database</h1>
                 </Container>
             </Jumbotron>
         </div>
