@@ -29,32 +29,32 @@
 // }
 
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Button, Container } from 'reactstrap';
 
 export default class Card extends Component {
     render() {
         console.log(this.props.item);
         let item = this.props.item.map((item) => {
             return (
-                <div className="card col-md-6" style={{ width: '20rem' }} key={item.id}>
-                    <img className="card-img-top w-100" src="\assets\janedoefunko.jpg" alt="" />
-                    <div className="card-block">
-                        <h2 className="card-title">{item.title}</h2>
-                    </div>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">{item.image}</li>
-                        <li className="list-group-item">{item.series}</li>
-                    </ul>
-                    <br/>
-                    <div>
-                    <Button color="info" onClick="">Collection</Button>{' '}
-                    <Button color="info" onClick="">Wishlist</Button>                   
-                    </div>
+                <div  className="card col-md-6" style={{ width: '20rem' }} key={item.id}>
+                        <img className="card-img-top w-100" src="\assets\janedoefunko.jpg" alt="" />
+                        <div className="card-block">
+                            <h2 className="card-title">{item.title}</h2>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">{item.image}</li>
+                            <li className="list-group-item">{item.series}</li>
+                        </ul>
+                        <br />
+                        <div>
+                            <Button color="info" onClick="">Collection</Button>{' '}
+                            <Button color="info" onClick="">Wishlist</Button>
+                        </div>
                 </div>
             )
         })
         return (
-            <div className="row p-1">
+            <div id="itemcard" className="row p-1">
                 {item}
             </div>
         )

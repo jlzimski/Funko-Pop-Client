@@ -33,12 +33,12 @@ function App() {
     <div className="App">
       <Sitebar clickLogout={clearToken}/>
       <Header />
-      <Auth updateToken={updateToken} />
+      {/* <Auth updateToken={updateToken} /> */}
       {/* <ListIndex updateToken={updateToken} /> */}
       <div className="mainBody">
       <br/> 
       <Items />
-      <Body />
+      {/* <Body /> */}
       <br/>
       </div>
       <hr/>

@@ -38,10 +38,12 @@
 }
 
 .navbar {
+  background-color: #1a6fa8;
   border:crimson 1px solid;
   text-align: center;
   display: inline-block;
   width: 100%;
+  margin-top: 0;
 }
 
 /* .leftPadding {
@@ -51,16 +53,19 @@
 .rightPadding {
   width: 15%;
 } */
-#user {
+#menu {
   border:crimson 1px solid;
+  width: 20%;
+  color: #61dafb;
 }
 
-
 #search {
-  width: 25%;
+  width: 20%;
   border:crimson 1px solid;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 0;
+  align-content: stretch;
 }
 
 .drop-down-row {
@@ -74,6 +79,7 @@
   padding-top: 0;
   margin-top: 0;
   border-top: 0;
+  height: 60px;
 }
 
 .body {
@@ -81,12 +87,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border:crimson 1px solid;
-
+  border:rgb(58, 53, 54) 1px solid;
 }
 
-#card {
-  width: 350px;
+#itemcard {
+  /* width: 325px; */
   border:crimson 1px solid;
 
 }
