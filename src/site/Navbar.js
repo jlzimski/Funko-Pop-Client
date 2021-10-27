@@ -10,7 +10,7 @@ const Sitebar = (props) => {
                 <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
-                        <NavItem >New? Click here to drink the Koolaid! --> Create Account</NavItem>
+                        <NavItem >New? Join the Circus --> Create Account</NavItem>
                         <NavItem >Hello Friend! --> Login</NavItem>
                         <NavItem onClick={props.clickLogout}>So Long Old Pal! --> Sign Out</NavItem>
                         <hr />

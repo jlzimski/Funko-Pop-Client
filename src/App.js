@@ -1,12 +1,9 @@
 import './App.css';
 import Sitebar from './site/Navbar';
 import Header from './site/Header';
-import Body from './site/Body';
 import Footer from './site/Footer';
 import { useEffect, useState } from 'react';
 import Auth from './components/user/Auth'
-// import CollectionCreate from './components/lists/CollectionCreate';
-// import ListIndex from './components/lists/ListIndex';
 import Items from './components/items/Items';
 
 function App() {
@@ -34,11 +31,9 @@ function App() {
       <Sitebar clickLogout={clearToken}/>
       <Header />
       {/* <Auth updateToken={updateToken} /> */}
-      {/* <ListIndex updateToken={updateToken} /> */}
       <div className="mainBody">
       <br/> 
       <Items />
-      {/* <Body /> */}
       <br/>
       </div>
       <hr/>

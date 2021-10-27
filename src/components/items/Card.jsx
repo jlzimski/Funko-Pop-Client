@@ -29,7 +29,7 @@
 // }
 
 import React, { Component } from 'react';
-import { Button, Container } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 export default class Card extends Component {
     render() {
@@ -54,7 +54,7 @@ export default class Card extends Component {
             )
         })
         return (
-            <div id="itemcard" className="row p-1">
+            <div className="row p-1">
                 {item}
             </div>
         )
